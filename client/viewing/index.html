@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles/paper.css" type="text/css">
+    <link rel="stylesheet" href="../styles/style.css" type="text/css">
+    <link rel="icon" href="../images/V.PNG" type="image/png" sizes="16x16">
+    <title>Vocab</title>
+</head>
+<body>
+    <div id="sidebar">
+        <div id="search-box">
+            <p><strong>Find A Word</strong></p>
+            <input id="searchbar" type="text" placeholder="Search...">
+        </div>
+        <div id="history-list">
+            <p id="history-title"><strong>Recent History</strong></p>
+            <ul>
+                <li id="recent-new" class="top-border">placeholder</li>
+                <li id="recent-0" class="hidden current top-border">word 0</li>
+                <li id="recent-1" class="hidden">word 1</li>
+                <li id="recent-2" class="hidden">word 2</li>
+                <li id="recent-3" class="hidden">word 3</li>
+                <li id="recent-4" class="hidden">word 4</li>
+                <li id="recent-5" class="hidden">word 5</li>
+                <li id="recent-6" class="hidden">word 6</li>
+                <li id="recent-7" class="hidden">word 7</li>
+                <li id="recent-8" class="hidden">word 8</li>
+                <li id="recent-9" class="hidden">word 9</li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <header>    
+            <h1>VOCABULARY</h1>
+        </header>
+        <main>
+            <h3 id="welcome" class="hidden">LEARN NEW WORDS OR DIE TRYING</h3>
+            <button type="button" id="random-word" class="hidden">Random Word</button>
+            <div id="main-content" class="hidden">
+                <div id="left">
+                    <button type="button" id="left-button" class="hidden">
+                        <img src="../images/arrow_left.png">
+                    </button>
+                </div>
+                <div id="word-content">
+                    <div class="flip-card move">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h2 id="word"></h2>
+                                <h3 id="pronunciation"></h3>
+                                <h3 id="part-of-speech"></h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p id="definition"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="right">
+                    <button type="button" id="right-button" class="hidden">
+                        <img src="../images/arrow_right.png">
+                    </button>
+                </div>
+            </div>
+            <div id="controls" class="hidden">
+                <div id="word-controls">
+                    <button type="button" id="new-word">New Word</button>
+                </div>
+                <div id="frequency-controls">
+                    <button type="button" id="decrease-frequency">Decrease Frequency</button>
+                    <span id="frequency"></span>
+                    <button type="button" id="increase-frequency">Increase Frequency</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <label class="paper-btn" for="history-modal">View Full History</label>
+            <button onclick="location.href='../editing/edit.html';">Edit the Dictionary</button>
+            <p>&copy; Will Dickinson 2019</p>
+        </footer>
+    </div>
+
+    <input class="modal-state" id="history-modal" type="checkbox">
+    <div class="modal">
+        <label class="modal-bg" for="history-modal"></label>
+        <div id="full-history" class="modal-body modal-form">
+            <label class="btn-close" for="history-modal">X</label>
+            <h2 class="modal-title">Full History</h2>
+            <ul id="full-history-list">
+            </ul>
+            <h4 id="history-msg" style="margin-top: 10px;">No history yet!</h4>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../queue.js"></script>
+    <script src="viewing.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles/paper.css" type="text/css">
+    <link rel="stylesheet" href="../styles/style.css" type="text/css">
+    <link rel="icon" href="../images/V.PNG" type="image/png" sizes="16x16">
+    <title>Vocab</title>
+</head>
+<body>
+    <div id="sidebar">
+        <div id="search-box">
+            <p><strong>Find A Word</strong></p>
+            <input id="searchbar" type="text" placeholder="Search...">
+        </div>
+        <div id="history-list">
+            <p id="history-title"><strong>Recently Added Words</strong></p>
+            <ul>
+                <li id="recent-new-edit" class="top-border">placeholder</li>
+                <li id="recent-0" class="hidden top-border">word 0</li>
+                <li id="recent-1" class="hidden">word 1</li>
+                <li id="recent-2" class="hidden">word 2</li>
+                <li id="recent-3" class="hidden">word 3</li>
+                <li id="recent-4" class="hidden">word 4</li>
+                <li id="recent-5" class="hidden">word 5</li>
+                <li id="recent-6" class="hidden">word 6</li>
+                <li id="recent-7" class="hidden">word 7</li>
+                <li id="recent-8" class="hidden">word 8</li>
+                <li id="recent-9" class="hidden">word 9</li>
+                <li id="recent-old-edit" class="top-border">placeholder</li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <header>    
+            <h1>VOCABULARY EDITING</h1>
+        </header>
+        <main>
+            <label class="add-button paper-btn hidden" for="modal-1">Add A New Word</label>
+            <button id="top-view-dictionary" class="hidden" onclick="location.href='../viewing/index.html';">View the Dictionary</button>
+            <div id="table-content">
+                
+            </div>
+        </main>
+        <footer>
+            <label class="add-button paper-btn hidden" for="modal-1">Add A New Word</label>
+            <button onclick="location.href='../viewing/index.html';">View the Dictionary</button>
+            <p>&copy; Will Dickinson 2019</p>
+        </footer>
+    </div>
+    
+    <input class="modal-state" id="modal-1" type="checkbox">
+    <div class="modal">
+        <label class="modal-bg" for="modal-1"></label>
+        <div class="modal-body modal-form">
+            <label class="btn-close" for="modal-1">X</label>
+            <h4 class="modal-title">Add a Word</h4>
+            <h5 class="modal-subtitle">Enter data into the required fields</h5>
+            <div class="text-input">
+                <form>
+                    Word:<br>
+                    <input type="text" name="word-add">
+                    Pronunciation:<br>
+                    <input type="text" name="pronunciation-add">
+                    Part of Speech:<br>
+                    <input type="text" name="part-of-speech-add">
+                    Definition:<br>
+                    <textarea name="definition-add">Definition</textarea>
+                </form>
+            </div>
+            <div class="btn-container">
+                <label id="add-confirm" class="paper-btn" for="modal-1">Add Word</label>
+            </div>
+        </div>
+    </div>
+    
+    <input class="modal-state" id="modal-3" type="checkbox">
+    <div class="modal">
+        <label class="modal-bg" for="modal-3"></label>
+        <div class="modal-body modal-form">
+            <label class="btn-close" for="modal-3">X</label>
+            <h4 class="modal-title">Edit a Word</h4>
+            <h5 class="modal-subtitle" id="edit-text">Edit the data in the fields</h5>
+            <div class="text-input">
+                <form>
+                    Word:<br>
+                    <input type="text" name="word-edit">
+                    Pronunciation:<br>
+                    <input type="text" name="pronunciation-edit">
+                    Part of Speech:<br>
+                    <input type="text" name="part-of-speech-edit">
+                    Definition:<br>
+                    <textarea name="definition-edit"></textarea>
+                </form>
+            </div>
+            <div class="btn-container">
+                <label id="edit-confirm" class="paper-btn" for="modal-3">Edit Word</label>
+            </div>
+        </div>
+    </div>
+    
+    <input class="modal-state" id="modal-2" type="checkbox">
+    <div class="modal">
+        <label class="modal-bg" for="modal-2"></label>
+        <div class="modal-body">
+            <label class="btn-close" for="modal-2">X</label>
+            <h4 class="modal-title">Are you sure?</h4>
+            <h5 class="modal-subtitle" id="del-text">delete this word</h5>
+            <div class="btn-container">
+                <label id="del-confirm" class="paper-btn" for="modal-2">Yes</label>
+                <label id="del-deny" class="paper-btn" for="modal-2">No</label>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../queue.js"></script>
+    <script src="editing.js"></script>
+    <!-- <script src="../vocabBackEnd/vocab.js"></script>
+    <script src="../vocabBackEnd/migration.js"></script> -->
+</body>
+</html>

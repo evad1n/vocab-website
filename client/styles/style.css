@@ -1,0 +1,381 @@
+html, body{
+    min-height: 100vh;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar{
+    position: fixed;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 100%;
+    border-right: solid;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+    transition: 0.5s;
+}
+
+#sidebar p{
+    text-align: center;
+    border-bottom: solid;
+}
+
+#history-title{
+    position: relative;
+    top: -10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.top-border{
+    border-top: solid;
+}
+
+ul li{
+    border-bottom: solid;
+    transition: background-color 0.1s;
+    position: relative;
+    height: 40px;
+    box-sizing: border-box;
+    padding-top: 2.4px;
+}
+
+ul li:hover{
+    background-color: #aaaaaa;
+    cursor: pointer;
+}
+
+#recent-new{
+    position: absolute;    
+    width: 197.6px;
+    top: 214px;
+    display: none;
+    padding-top: 0;
+}
+
+#recent-new-edit{
+    position: absolute;    
+    width: 197.6px;
+    top: 243.6px;
+    display: none;
+    padding-top: 2.4px;
+}
+
+#recent-old-edit{
+    position: absolute;    
+    width: 197.6px;
+    top: 681.6px;
+    height: 42.4px;
+    display: none;
+    padding-top: 4.8px;
+}
+
+.current{
+    background-color: #777777;
+}
+
+ul a{
+    text-decoration: none;
+}
+
+ul a:link{
+    color: inherit;
+}
+
+#content{
+    margin-left: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    text-align: center;
+}
+
+h1{
+    margin: 20px;
+    font-size: 4em;
+}
+
+main{
+    text-align: center;
+    flex: 1;
+}
+
+#main-content{
+    flex-direction: row;
+    height: 400px;
+    width: 100%;
+    margin: auto;
+}
+
+#left{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    top: 125px;
+}
+
+#right{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    top: 125px;
+}
+
+#word-content{
+    border: solid;
+    overflow: hidden;
+    margin: 0;
+    width: calc(100% - 300px);
+    height: 100%;
+}
+
+#upper-content{
+    display: flex;
+    height: 100px;
+}
+
+#word{
+    font-size: 3em;
+    margin: 0;
+}
+
+/* #pronunciation{
+    
+}
+
+#part-of-speech{
+    
+} */
+
+#definition{
+    font-size: 1.2em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+img{
+    width: 150px;
+}
+
+#word-controls, #frequency-controls{
+    padding: 10px;
+}
+
+#frequency-controls{
+    margin-bottom: 10px;
+}
+
+#frequency{
+    padding: 10px;
+}
+
+footer{
+    text-align: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.hidden{
+    display: none;
+}
+
+#random-word{
+    width: 300px;
+    height: 150px;
+    font-size: 2em;
+}
+
+/*edit page style*/
+#add-button{
+    margin-bottom: 10px; 
+}
+
+#entry{
+    width: 100%;
+    border-spacing: 0;
+}
+
+#entry th{
+    text-align: center;
+}
+
+#entry tr td{
+    padding: 10px 0px;
+}
+
+#entry tr td:nth-of-type(1){
+    width: 125px;
+}
+#entry tr td:nth-of-type(2){
+    width: 120px;
+}
+#entry tr td:nth-of-type(3){
+    width: 50px;
+}
+#entry tr td:nth-of-type(4){
+    width: 500px;
+}
+
+#entry tr td:last-child{
+    width: 200px;
+}
+
+#entry label{
+    width: 80px;
+    margin-right: 5px;
+}
+
+.focused{
+    background-color: #ccc;
+}
+
+/*modal stuff*/
+.modal-form{
+    width: 50%;
+}
+
+#full-history{
+    height: 80%;
+    overflow: auto;
+    text-align: center;
+}
+
+#full-history-list{
+    width: 70%;
+    margin: auto;
+    border: 2px solid black;
+}
+
+#full-history-list li, #full-history-list li label{
+    padding-top: 4px;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+#full-history-list li:last-of-type{
+    border-bottom: none;
+}
+
+h4, h5{
+    text-align: center;
+}
+
+.btn-container{
+    text-align: center;
+    margin-top: 10px;
+}
+
+form{
+    text-align: center;
+}
+
+input{
+    margin: auto;
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    height: 100px;
+}
+
+/*flipcard stuff*/
+.move{
+    position: relative;
+}
+
+.flip-card{
+    margin: 50px auto;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.flip-card-front{
+    background-color: rgb(250, 250, 250);
+}
+
+.flip-card-back{
+    background-color: rgb(250, 250, 250);
+    transform: rotateY(180deg);
+}
+
+#search-box{
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#searchbar{
+    margin: auto;
+    width: 160px;
+    background-color: #dddddd;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
